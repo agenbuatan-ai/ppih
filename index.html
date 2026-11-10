@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163b32">
+  <title>Generator Formulir PPIH 1448 H / 2027 M</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">PPIH</div>
+    <div class="brand-copy">
+      <h1>Generator Formulir PPIH</h1>
+      <p>Administrasi Petugas Penyelenggara Ibadah Haji · 1448 H / 2027 M</p>
+    </div>
+    <span class="offline-pill">HTML · CSS · JavaScript</span>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-heading">
+        <span class="eyebrow">MENU DOKUMEN</span>
+        <h2>Daftar Formulir</h2>
+      </div>
+      <nav id="formNav" class="form-nav" aria-label="Daftar formulir">
+        <button class="nav-item active" data-form="1"><span>01</span><b>Surat Izin Instansi</b></button>
+        <button class="nav-item" data-form="2"><span>02</span><b>Pernyataan Kemampuan Aplikasi</b></button>
+        <button class="nav-item" data-form="3"><span>03</span><b>Surat Pernyataan PPIH</b></button>
+        <button class="nav-item" data-form="4"><span>04</span><b>Surat Keterangan Pengalaman Kerja</b></button>
+        <button class="nav-item" data-form="5"><span>05</span><b>Surat Pernyataan Izin Suami</b></button>
+        <button class="nav-item" data-form="6"><span>06</span><b>Surat Pernyataan Tidak Hamil</b></button>
+        <button class="nav-item" data-form="7"><span>07</span><b>Surat Pernyataan Telah Berhaji</b></button>
+      </nav>
+      <div class="sidebar-note">
+        <strong>Petunjuk</strong>
+        <p>Isi data pemohon bersama terlebih dahulu. Data tersebut akan digunakan kembali pada formulir yang relevan.</p>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">FORMULIR <span id="formNumber">1</span> DARI 7</span>
+          <h2 id="currentTitle">Surat Izin Instansi</h2>
+          <p id="currentDescription">Isi identitas atasan langsung, pemohon, dan informasi surat izin.</p>
+        </div>
+        <div class="heading-actions">
+          <button class="btn btn-light" id="resetCurrent" type="button">Reset formulir ini</button>
+        </div>
+      </div>
+
+      <section class="panel common-panel">
+        <div class="panel-title">
+          <div>
+            <span class="eyebrow">DATA YANG DIGUNAKAN KEMBALI</span>
+            <h3>Data Pribadi Pemohon</h3>
+          </div>
+          <span class="tag">Formulir 1–4, 6–7</span>
+        </div>
+        <p class="helper">Lengkapi sekali. Data akan ditampilkan pada bagian yang sesuai di formulir 1–4, 6, dan 7. Formulir 5 memiliki data suami dan istri tersendiri.</p>
+        <div id="commonFields" class="field-grid"></div>
+      </section>
+
+      <section class="panel shared-panel">
+        <div class="panel-title">
+          <div>
+            <span class="eyebrow">DATA BERSAMA · DIISI SATU KALI</span>
+            <h3>Data Atasan Langsung dan Informasi Surat</h3>
+          </div>
+          <span class="tag">Dipakai otomatis</span>
+        </div>
+        <p class="helper">Isi nama, NIP/NRP, jabatan, instansi atasan langsung, KOP surat, lokasi, dan tanggal satu kali. Data akan ditampilkan pada bagian formulir yang memerlukannya sesuai format dokumen sumber.</p>
+        <div id="sharedFields" class="field-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">
+          <div>
+            <span class="eyebrow">ISIAN KHUSUS</span>
+            <h3 id="specificHeading">Detail Surat Izin Instansi</h3>
+          </div>
+          <span class="tag tag-muted">Sesuai dokumen sumber</span>
+        </div>
+        <div id="specificFields"></div>
+      </section>
+
+      <section class="panel preview-panel">
+        <div class="preview-heading">
+          <div>
+            <span class="eyebrow">HASIL DOKUMEN</span>
+            <h3>Pratinjau PDF</h3>
+            <p class="helper">Periksa isian sebelum mencetak. Setiap formulir dirancang sebagai dokumen A4 tersendiri.</p>
+          </div>
+          <div class="preview-actions">
+            <button class="btn btn-outline" id="printCurrent" type="button">Cetak halaman ini</button>
+            <button class="btn btn-primary" id="printAll" type="button">Cetak 7 halaman</button>
+          </div>
+        </div>
+        <div id="previewContainer" class="preview-container"></div>
+      </section>
+
+      <footer class="app-footer">
+        <span>Generator dokumen lokal · Tidak mengirim data ke server</span>
+        <span>Gunakan tanda tangan dan pengesahan sesuai ketentuan instansi.</span>
+      </footer>
+    </section>
+  </main>
+
+  <div id="printArea" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
